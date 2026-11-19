@@ -1,0 +1,12 @@
+{
+  "pyproject.toml": "22f3c47a33da5b010cac5c91bc5583db16e6fc462b5f34399f040a8171685855",
+  "scripts/audit.py": "a719203100ff884498f8c85fe78ee770b894bbe72aaad50f2533cab256cc62a8",
+  "sql/attribution.sql": "cfad581fe88d6d8f34c6f7757f808d02462a7d42d0bef5e34be57609733ab307",
+  "tests/test_attribution.py": "c77a6a49994174b048ba84a5bf71bfae4176ac66d07dbe8d6c874cfaab7d5cfa",
+  "tests/test_delivery.py": "e7c6ba492bc566463ffdb35c63eee8367883cbf24321ced107fc64bc26d5a5a2",
+  "src/marketing_funnel/core.py": "f32ba72d9d03cdbcd00711dbc6b3e48f65925231b9922f9ad6fd3567be1ca086",
+  "src/marketing_funnel/sample.py": "edccce579dc5e0843d406661056be6af0f569b84c75dece7e1df47dd0e13653d",
+  "src/marketing_funnel/__init__.py": "35a49360b90b62cc14ddf4c0baebaf80d90925a7bf38738474bcd0ca44732242",
+  "src/marketing_funnel/__main__.py": "9da5b33a23d97475d6657abef372c4f31992f49756e9ac7cf9639e18000611ee",
+  ".github/workflows/ci.yml": "56799d427e56bc1976c2bfc572e78fff40cac741f72719fd563aaa3235fcdb6c"
+}

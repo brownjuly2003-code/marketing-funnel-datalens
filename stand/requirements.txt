@@ -1,0 +1,2 @@
+# Screenshots only (stand/screenshots.py); the API check uses the standard library.
+playwright==1.65.2

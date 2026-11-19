@@ -1,0 +1,23 @@
+{
+  "name": "marketing-funnel-datalens stand",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04@sha256:d94c97dd9cacf183d0a6fd12a8e87b526e9e928307674ae9c94139139c0c6eae",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:4.1.3": {},
+    "ghcr.io/devcontainers/features/python:1.8.1": {
+      "version": "3.11"
+    },
+    "ghcr.io/devcontainers/features/sshd:1.1.0": {}
+  },
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "16gb",
+    "storage": "32gb"
+  },
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "DataLens UI"
+    }
+  },
+  "postCreateCommand": "python --version && docker --version"
+}

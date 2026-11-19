@@ -1,0 +1,170 @@
+# DataLens OSS stand for the marketing funnel check. Prepared from documentation, not run yet.
+#
+# Source: https://github.com/datalens-tech/datalens, release v2.9.0 (2026-02-19),
+#   file docker-compose.yaml at tag v2.9.0, versions-config.json at the same tag.
+# Service set and overrides follow the release init.sh with
+#   --disable-auth --disable-temporal --disable-demo:
+#   services postgres, control-api, data-api, us, ui (no auth, temporal, meta-manager, ui-api);
+#   AUTH_ENABLED=false, AUTH_TYPE=NONE, AUTH_TOKEN_*="-", TEMPORAL_AUTH_ENABLED=false,
+#   EXPORT_WORKBOOK_ENABLED=0, INIT_DEMO_DATA=0.
+# Images and environment are copied from the release file. Changes against it:
+#   - images pinned by digest (resolved on ghcr.io 2026-11-19; postgres tag 16 is not a release-specific tag);
+#   - container_name removed so the stand cannot clash with another DataLens on the host;
+#   - secrets have no defaults and come from stand/.env (template stand/.env.example);
+#   - control-api and data-api published on 127.0.0.1:8010/8020 as init.sh --dev-expose-ports does,
+#     UI on 127.0.0.1:8080;
+#   - HC=0: Highcharts is proprietary, the release README says D3 is used without it;
+#   - ClickHouse 24.8.14.39 added, the same image the project tests use (tests/clickhouse_cases.py).
+name: marketing-funnel-datalens-stand
+
+services:
+  postgres:
+    image: ghcr.io/datalens-tech/datalens-postgres:16@sha256:37ba1c536c68fb5c0f63bc686897ea7bf654e6195e88f450437c020a063163b4
+    pull_policy: missing
+    healthcheck:
+      test: ["CMD", "pg_isready", "-d", "pg-us-db", "-U", "pg-user"]
+      interval: 10s
+      retries: 6
+      timeout: 5s
+      start_period: 3s
+    environment:
+      HC: 0
+      CONTROL_API_CRYPTO_KEY: "${CONTROL_API_CRYPTO_KEY:?set in stand/.env}"
+      US_ENDPOINT: http://us:8080
+      POSTGRES_HOST: localhost
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: pg-user
+      POSTGRES_DB_COMPENG: pg-compeng-db
+      POSTGRES_DB_AUTH: pg-auth-db
+      POSTGRES_DB_US: pg-us-db
+      POSTGRES_DB_DEMO: pg-demo-db
+      POSTGRES_DB_META_MANAGER: pg-meta-manager-db
+      POSTGRES_DB_TEMPORAL: pg-temporal-db
+      POSTGRES_DB_TEMPORAL_VISIBILITY: pg-temporal-visibility-db
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:?set in stand/.env}"
+      INIT_DEMO_DATA: 0
+      INIT_DB_DEMO: 1
+      INIT_DB_AUTH: 1
+      INIT_DB_META_MANAGER: 1
+      INIT_DB_TEMPORAL: 1
+      INIT_EXTERNAL_POSTGRES: 0
+    volumes:
+      - db-postgres:/var/lib/postgresql/data
+
+  control-api:
+    image: ghcr.io/datalens-tech/datalens-control-api:0.2457.0@sha256:1fa416302f8339362bbd940ba1c49c3275f5a22413ee354373b3cdca2e9117f0
+    pull_policy: missing
+    environment:
+      BI_API_UWSGI_WORKERS_COUNT: 4
+      RQE_FORCE_OFF: 1
+      RQE_SECRET_KEY: ""
+      DL_CRY_ACTUAL_KEY_ID: KEY
+      DL_CRY_KEY_VAL_ID_KEY: "${CONTROL_API_CRYPTO_KEY:?set in stand/.env}"
+      US_HOST: http://us:8080
+      US_MASTER_TOKEN: "${US_MASTER_TOKEN:?set in stand/.env}"
+      CONNECTOR_AVAILABILITY_VISIBLE: clickhouse,postgres,chyt,ydb,mysql,greenplum,mssql,oracle,trino,appmetrica_api,metrika_api
+      AUTH__TYPE: NONE
+      AUTH__JWT_ALGORITHM: "PS256"
+      AUTH__JWT_KEY: "-"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8010:8080"
+
+  data-api:
+    image: ghcr.io/datalens-tech/datalens-data-api:0.2457.0@sha256:c7448f7d07851541181410f8fbf4b17c4bce28cbea11bbe4c51730f337636c37
+    pull_policy: missing
+    environment:
+      GUNICORN_WORKERS_COUNT: 5
+      RQE_FORCE_OFF: 1
+      CACHES_ON: 0
+      MUTATIONS_CACHES_ON: 0
+      RQE_SECRET_KEY: ""
+      DL_CRY_ACTUAL_KEY_ID: KEY
+      DL_CRY_KEY_VAL_ID_KEY: "${CONTROL_API_CRYPTO_KEY:?set in stand/.env}"
+      BI_COMPENG_PG_ON: 1
+      BI_COMPENG_PG_URL: "postgres://pg-user:${POSTGRES_PASSWORD:?set in stand/.env}@postgres:5432/pg-compeng-db"
+      US_HOST: http://us:8080
+      US_MASTER_TOKEN: "${US_MASTER_TOKEN:?set in stand/.env}"
+      AUTH__TYPE: NONE
+      AUTH__JWT_ALGORITHM: "PS256"
+      AUTH__JWT_KEY: "-"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8020:8080"
+
+  us:
+    image: ghcr.io/datalens-tech/datalens-us:1.39.0@sha256:9f13b3cec8d27f5e39064c083dbd22c7002f78d86830f3dd476b7ba42d397b43
+    pull_policy: missing
+    environment:
+      APP_INSTALLATION: opensource
+      APP_ENV: prod
+      APP_PORT: 8080
+      AUTH_ENDPOINT: http://auth:8080
+      MASTER_TOKEN: "${US_MASTER_TOKEN:?set in stand/.env}"
+      AUTH_MASTER_TOKEN: "${AUTH_MASTER_TOKEN:?set in stand/.env}"
+      POSTGRES_DSN_LIST: "postgres://pg-user:${POSTGRES_PASSWORD:?set in stand/.env}@postgres:5432/pg-us-db"
+      US_SURPRESS_DB_STATUS_LOGS: "true"
+      SKIP_INSTALL_DB_EXTENSIONS: 1
+      USE_DEMO_DATA: 0
+      HC: 0
+      AUTH_ENABLED: "false"
+      AUTH_TOKEN_PUBLIC_KEY: "-"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  ui:
+    image: ghcr.io/datalens-tech/datalens-ui:0.3831.0@sha256:5c720832463cc54c43307a9aeafb8f881fb54facc548edac35efb8ccfe327b0f
+    pull_policy: missing
+    environment:
+      APP_MODE: full
+      APP_ENV: production
+      APP_INSTALLATION: opensource
+      AUTH_POLICY: disabled
+      US_ENDPOINT: http://us:8080
+      AUTH_ENDPOINT: http://auth:8080
+      BI_API_ENDPOINT: http://control-api:8080
+      BI_DATA_ENDPOINT: http://data-api:8080
+      META_MANAGER_ENDPOINT: http://meta-manager:8080
+      US_MASTER_TOKEN: "${US_MASTER_TOKEN:?set in stand/.env}"
+      RELEASE_VERSION: "2.9.0"
+      HC: 0
+      HC_ENDPOINT: ""
+      HC_PROTOCOL: ""
+      HC_MODULES: ""
+      YANDEX_MAP_ENABLED: 0
+      YANDEX_MAP_TOKEN: ""
+      EXPORT_WORKBOOK_ENABLED: 0
+      AUTH_ENABLED: "false"
+      AUTH_MASTER_TOKEN: "${AUTH_MASTER_TOKEN:?set in stand/.env}"
+      AUTH_TOKEN_PUBLIC_KEY: "-"
+      AUTH_SIGNUP_DISABLED: "false"
+    depends_on:
+      - us
+    ports:
+      - "127.0.0.1:8080:8080"
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:24.8.14.39@sha256:1ffa82edee000a42c09313bd9f1293d94c570aee74babc1b3ca9983a35fa597b
+    pull_policy: missing
+    environment:
+      CLICKHOUSE_DATALENS_PASSWORD: "${CLICKHOUSE_DATALENS_PASSWORD:?set in stand/.env}"
+    volumes:
+      - ./clickhouse/users.d/datalens.xml:/etc/clickhouse-server/users.d/datalens.xml:ro
+    healthcheck:
+      test: ["CMD", "clickhouse-client", "--query", "SELECT 1"]
+      interval: 5s
+      retries: 24
+      timeout: 5s
+      start_period: 5s
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+
+volumes:
+  db-postgres:

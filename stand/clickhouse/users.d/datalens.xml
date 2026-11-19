@@ -1,0 +1,15 @@
+<!-- Read-only ClickHouse user for the DataLens connection on the stand.
+     The default user is left as the image configures it; the loader uses it through docker exec.
+     Password comes from the container environment (stand/.env). -->
+<clickhouse>
+    <users>
+        <datalens>
+            <password from_env="CLICKHOUSE_DATALENS_PASSWORD"/>
+            <networks>
+                <ip>::/0</ip>
+            </networks>
+            <profile>readonly</profile>
+            <quota>default</quota>
+        </datalens>
+    </users>
+</clickhouse>

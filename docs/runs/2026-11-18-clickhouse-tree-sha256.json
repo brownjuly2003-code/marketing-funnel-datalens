@@ -1,0 +1,29 @@
+{
+  "run": "marketing-funnel-datalens_20261118-181340",
+  "note": "SHA-256 of the 22 non-Markdown files packed for this CI run; each equals git show <commit>:<path>",
+  "commit": "7d032d051e2c13f151ed3eff835fe479d78f16db",
+  "files": {
+    ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
+    ".github/workflows/ci.yml": "d826344af993518ce6e3c160d415588464abc9327b1c15b53ff362ff0647ccf9",
+    ".gitignore": "dfc77d105eb27561046864809c2c8af12c7da222dd34254849076c931f493dfc",
+    "docs/runs/2026-10-31-synthetic/inputs.json": "11af0d9eae6b1bdb71083415356779a8d9cd3996082bfca71acb2167b14a9729",
+    "docs/runs/2026-10-31-synthetic/manifest.json": "9b668d09e44ed7696f9a4eb29ecd2718ddfd6f775cf4f89c15ff7e69bd69ed36",
+    "docs/runs/2026-10-31-synthetic/report.json": "3bb6ed36467dd1991b753fd9e5e9a6834ff83ad0879bf317de34251904028b7c",
+    "docs/runs/source-sha256.json": "517241872c32695301614dadab7395f2a8ab2871fcfb7c055d61eb90cbbd742c",
+    "pyproject.toml": "22f3c47a33da5b010cac5c91bc5583db16e6fc462b5f34399f040a8171685855",
+    "scripts/audit.py": "a719203100ff884498f8c85fe78ee770b894bbe72aaad50f2533cab256cc62a8",
+    "scripts/load_clickhouse.py": "e8aad254f3067317c19af2fb4a7da2c89acea286cae41f15fd1c8d255fdc078c",
+    "sql/attribution.sql": "cfad581fe88d6d8f34c6f7757f808d02462a7d42d0bef5e34be57609733ab307",
+    "sql/clickhouse/attribution.sql": "c62b8d47e31c6d859e4bee0773eb7869705acb3dc604ac928427a4efed83aad5",
+    "sql/clickhouse/channel_metrics.sql": "b16bf3d030fe0c788553a49f3af4e868d54092726c18bc731357659f9cf22c9e",
+    "sql/clickhouse/inputs.sql": "df1f7fac056b10b69a8b9fc06c4bfede70a98832ff9b4335c92f1c31b9f530c6",
+    "sql/clickhouse/user_funnel.sql": "277b74fad74a71a1642bcc458e9cdac1c92c70b72e71b3eb917467e526c165e7",
+    "src/marketing_funnel/__init__.py": "35a49360b90b62cc14ddf4c0baebaf80d90925a7bf38738474bcd0ca44732242",
+    "src/marketing_funnel/__main__.py": "9da5b33a23d97475d6657abef372c4f31992f49756e9ac7cf9639e18000611ee",
+    "src/marketing_funnel/core.py": "f32ba72d9d03cdbcd00711dbc6b3e48f65925231b9922f9ad6fd3567be1ca086",
+    "src/marketing_funnel/sample.py": "edccce579dc5e0843d406661056be6af0f569b84c75dece7e1df47dd0e13653d",
+    "tests/clickhouse_cases.py": "b5b62fe808982449841d60f96afd581ff24e017797e7afc040fe96a7dec7b9cd",
+    "tests/test_attribution.py": "c77a6a49994174b048ba84a5bf71bfae4176ac66d07dbe8d6c874cfaab7d5cfa",
+    "tests/test_delivery.py": "e7c6ba492bc566463ffdb35c63eee8367883cbf24321ced107fc64bc26d5a5a2"
+  }
+}

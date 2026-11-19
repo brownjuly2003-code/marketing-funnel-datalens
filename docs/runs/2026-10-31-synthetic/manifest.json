@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "mode": "synthetic",
+  "seed": 20261031,
+  "size": 120,
+  "sha256": {
+    "inputs.json": "11af0d9eae6b1bdb71083415356779a8d9cd3996082bfca71acb2167b14a9729",
+    "report.json": "3bb6ed36467dd1991b753fd9e5e9a6834ff83ad0879bf317de34251904028b7c"
+  }
+}

@@ -1,0 +1,1556 @@
+{
+  "events": 488,
+  "funnel": {
+    "impression": 120,
+    "click": 99,
+    "install": 75,
+    "registration": 58,
+    "subscription": 37
+  },
+  "channels": [
+    {
+      "model": "last_click",
+      "channel": "display",
+      "conversions": 9.0,
+      "revenue_cents": 4584100,
+      "cost_cents": 2062845,
+      "spend_cents": 78186,
+      "cpa_cents": 8687.333333333334,
+      "margin_cents": 2443069
+    },
+    {
+      "model": "last_click",
+      "channel": "email",
+      "conversions": 0.0,
+      "revenue_cents": 0,
+      "cost_cents": 0,
+      "spend_cents": 10000,
+      "cpa_cents": null,
+      "margin_cents": -10000
+    },
+    {
+      "model": "last_click",
+      "channel": "search",
+      "conversions": 14.0,
+      "revenue_cents": 5751600,
+      "cost_cents": 2588220,
+      "spend_cents": 77816,
+      "cpa_cents": 5558.285714285715,
+      "margin_cents": 3085564
+    },
+    {
+      "model": "last_click",
+      "channel": "social",
+      "conversions": 14.0,
+      "revenue_cents": 5296700,
+      "cost_cents": 2383515,
+      "spend_cents": 45515,
+      "cpa_cents": 3251.0714285714284,
+      "margin_cents": 2867670
+    },
+    {
+      "model": "last_click",
+      "channel": "unattributed",
+      "conversions": 7.0,
+      "revenue_cents": 3386100,
+      "cost_cents": 1523745,
+      "spend_cents": 0,
+      "cpa_cents": 0.0,
+      "margin_cents": 1862355
+    },
+    {
+      "model": "linear",
+      "channel": "display",
+      "conversions": 10.0,
+      "revenue_cents": 4758850,
+      "cost_cents": 2141485,
+      "spend_cents": 78186,
+      "cpa_cents": 7818.6,
+      "margin_cents": 2539179
+    },
+    {
+      "model": "linear",
+      "channel": "email",
+      "conversions": 0.0,
+      "revenue_cents": 0,
+      "cost_cents": 0,
+      "spend_cents": 10000,
+      "cpa_cents": null,
+      "margin_cents": -10000
+    },
+    {
+      "model": "linear",
+      "channel": "search",
+      "conversions": 10.5,
+      "revenue_cents": 3976500,
+      "cost_cents": 1789426,
+      "spend_cents": 77816,
+      "cpa_cents": 7411.047619047619,
+      "margin_cents": 2109258
+    },
+    {
+      "model": "linear",
+      "channel": "social",
+      "conversions": 16.5,
+      "revenue_cents": 6897050,
+      "cost_cents": 3103669,
+      "spend_cents": 45515,
+      "cpa_cents": 2758.4848484848485,
+      "margin_cents": 3747866
+    },
+    {
+      "model": "linear",
+      "channel": "unattributed",
+      "conversions": 7.0,
+      "revenue_cents": 3386100,
+      "cost_cents": 1523745,
+      "spend_cents": 0,
+      "cpa_cents": 0.0,
+      "margin_cents": 1862355
+    },
+    {
+      "model": "time_decay",
+      "channel": "display",
+      "conversions": 9.971126894906657,
+      "revenue_cents": 4753804,
+      "cost_cents": 2139212,
+      "spend_cents": 78186,
+      "cpa_cents": 7841.240094932312,
+      "margin_cents": 2536406
+    },
+    {
+      "model": "time_decay",
+      "channel": "email",
+      "conversions": 0.0,
+      "revenue_cents": 0,
+      "cost_cents": 0,
+      "spend_cents": 10000,
+      "cpa_cents": null,
+      "margin_cents": -10000
+    },
+    {
+      "model": "time_decay",
+      "channel": "search",
+      "conversions": 10.601055867826698,
+      "revenue_cents": 4027753,
+      "cost_cents": 1812487,
+      "spend_cents": 77816,
+      "cpa_cents": 7340.400896873389,
+      "margin_cents": 2137450
+    },
+    {
+      "model": "time_decay",
+      "channel": "social",
+      "conversions": 16.427817237266645,
+      "revenue_cents": 6850843,
+      "cost_cents": 3082881,
+      "spend_cents": 45515,
+      "cpa_cents": 2770.605451876396,
+      "margin_cents": 3722447
+    },
+    {
+      "model": "time_decay",
+      "channel": "unattributed",
+      "conversions": 7.0,
+      "revenue_cents": 3386100,
+      "cost_cents": 1523745,
+      "spend_cents": 0,
+      "cpa_cents": 0.0,
+      "margin_cents": 1862355
+    }
+  ],
+  "credits": [
+    {
+      "conversion_id": "e000424",
+      "model": "last_click",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 268100,
+      "cost_cents": 120645
+    },
+    {
+      "conversion_id": "e000424",
+      "model": "linear",
+      "channel": "search",
+      "weight": 0.5,
+      "revenue_cents": 134050,
+      "cost_cents": 60323
+    },
+    {
+      "conversion_id": "e000424",
+      "model": "linear",
+      "channel": "social",
+      "weight": 0.5,
+      "revenue_cents": 134050,
+      "cost_cents": 60322
+    },
+    {
+      "conversion_id": "e000424",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 137920,
+      "cost_cents": 62064
+    },
+    {
+      "conversion_id": "e000424",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 0.485563447453329,
+      "revenue_cents": 130180,
+      "cost_cents": 58581
+    },
+    {
+      "conversion_id": "e000084",
+      "model": "last_click",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 385300,
+      "cost_cents": 173385
+    },
+    {
+      "conversion_id": "e000084",
+      "model": "linear",
+      "channel": "display",
+      "weight": 0.5,
+      "revenue_cents": 192650,
+      "cost_cents": 86693
+    },
+    {
+      "conversion_id": "e000084",
+      "model": "linear",
+      "channel": "search",
+      "weight": 0.5,
+      "revenue_cents": 192650,
+      "cost_cents": 86692
+    },
+    {
+      "conversion_id": "e000084",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 0.485563447453329,
+      "revenue_cents": 187088,
+      "cost_cents": 84189
+    },
+    {
+      "conversion_id": "e000084",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 198212,
+      "cost_cents": 89196
+    },
+    {
+      "conversion_id": "e000119",
+      "model": "last_click",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 201400,
+      "cost_cents": 90630
+    },
+    {
+      "conversion_id": "e000119",
+      "model": "linear",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 201400,
+      "cost_cents": 90630
+    },
+    {
+      "conversion_id": "e000119",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 201400,
+      "cost_cents": 90630
+    },
+    {
+      "conversion_id": "e000285",
+      "model": "last_click",
+      "channel": "display",
+      "weight": 1.0,
+      "revenue_cents": 461400,
+      "cost_cents": 207630
+    },
+    {
+      "conversion_id": "e000285",
+      "model": "linear",
+      "channel": "display",
+      "weight": 1.0,
+      "revenue_cents": 461400,
+      "cost_cents": 207630
+    },
+    {
+      "conversion_id": "e000285",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 1.0,
+      "revenue_cents": 461400,
+      "cost_cents": 207630
+    },
+    {
+      "conversion_id": "e000040",
+      "model": "last_click",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 668500,
+      "cost_cents": 300825
+    },
+    {
+      "conversion_id": "e000040",
+      "model": "linear",
+      "channel": "display",
+      "weight": 0.5,
+      "revenue_cents": 334250,
+      "cost_cents": 150413
+    },
+    {
+      "conversion_id": "e000040",
+      "model": "linear",
+      "channel": "search",
+      "weight": 0.5,
+      "revenue_cents": 334250,
+      "cost_cents": 150412
+    },
+    {
+      "conversion_id": "e000040",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 0.485563447453329,
+      "revenue_cents": 324599,
+      "cost_cents": 146070
+    },
+    {
+      "conversion_id": "e000040",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 343901,
+      "cost_cents": 154755
+    },
+    {
+      "conversion_id": "e000334",
+      "model": "last_click",
+      "channel": "display",
+      "weight": 1.0,
+      "revenue_cents": 779700,
+      "cost_cents": 350865
+    },
+    {
+      "conversion_id": "e000334",
+      "model": "linear",
+      "channel": "display",
+      "weight": 0.5,
+      "revenue_cents": 389850,
+      "cost_cents": 175433
+    },
+    {
+      "conversion_id": "e000334",
+      "model": "linear",
+      "channel": "social",
+      "weight": 0.5,
+      "revenue_cents": 389850,
+      "cost_cents": 175432
+    },
+    {
+      "conversion_id": "e000334",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 401106,
+      "cost_cents": 180498
+    },
+    {
+      "conversion_id": "e000334",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 0.485563447453329,
+      "revenue_cents": 378594,
+      "cost_cents": 170367
+    },
+    {
+      "conversion_id": "e000434",
+      "model": "last_click",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 249100,
+      "cost_cents": 112095
+    },
+    {
+      "conversion_id": "e000434",
+      "model": "linear",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 249100,
+      "cost_cents": 112095
+    },
+    {
+      "conversion_id": "e000434",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 249100,
+      "cost_cents": 112095
+    },
+    {
+      "conversion_id": "e000393",
+      "model": "last_click",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 629500,
+      "cost_cents": 283275
+    },
+    {
+      "conversion_id": "e000393",
+      "model": "linear",
+      "channel": "search",
+      "weight": 0.5,
+      "revenue_cents": 314750,
+      "cost_cents": 141638
+    },
+    {
+      "conversion_id": "e000393",
+      "model": "linear",
+      "channel": "social",
+      "weight": 0.5,
+      "revenue_cents": 314750,
+      "cost_cents": 141637
+    },
+    {
+      "conversion_id": "e000393",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 323838,
+      "cost_cents": 145727
+    },
+    {
+      "conversion_id": "e000393",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 0.485563447453329,
+      "revenue_cents": 305662,
+      "cost_cents": 137548
+    },
+    {
+      "conversion_id": "e000473",
+      "model": "last_click",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 213300,
+      "cost_cents": 95985
+    },
+    {
+      "conversion_id": "e000473",
+      "model": "linear",
+      "channel": "search",
+      "weight": 0.5,
+      "revenue_cents": 106650,
+      "cost_cents": 47993
+    },
+    {
+      "conversion_id": "e000473",
+      "model": "linear",
+      "channel": "social",
+      "weight": 0.5,
+      "revenue_cents": 106650,
+      "cost_cents": 47992
+    },
+    {
+      "conversion_id": "e000473",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 109729,
+      "cost_cents": 49378
+    },
+    {
+      "conversion_id": "e000473",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 0.485563447453329,
+      "revenue_cents": 103571,
+      "cost_cents": 46607
+    },
+    {
+      "conversion_id": "e000245",
+      "model": "last_click",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 324700,
+      "cost_cents": 146115
+    },
+    {
+      "conversion_id": "e000245",
+      "model": "linear",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 324700,
+      "cost_cents": 146115
+    },
+    {
+      "conversion_id": "e000245",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 324700,
+      "cost_cents": 146115
+    },
+    {
+      "conversion_id": "e000056",
+      "model": "last_click",
+      "channel": "display",
+      "weight": 1.0,
+      "revenue_cents": 606500,
+      "cost_cents": 272925
+    },
+    {
+      "conversion_id": "e000056",
+      "model": "linear",
+      "channel": "display",
+      "weight": 1.0,
+      "revenue_cents": 606500,
+      "cost_cents": 272925
+    },
+    {
+      "conversion_id": "e000056",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 1.0,
+      "revenue_cents": 606500,
+      "cost_cents": 272925
+    },
+    {
+      "conversion_id": "e000196",
+      "model": "last_click",
+      "channel": "display",
+      "weight": 1.0,
+      "revenue_cents": 544500,
+      "cost_cents": 245025
+    },
+    {
+      "conversion_id": "e000196",
+      "model": "linear",
+      "channel": "display",
+      "weight": 1.0,
+      "revenue_cents": 544500,
+      "cost_cents": 245025
+    },
+    {
+      "conversion_id": "e000196",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 1.0,
+      "revenue_cents": 544500,
+      "cost_cents": 245025
+    },
+    {
+      "conversion_id": "e000005",
+      "model": "last_click",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 569600,
+      "cost_cents": 256320
+    },
+    {
+      "conversion_id": "e000005",
+      "model": "linear",
+      "channel": "display",
+      "weight": 0.5,
+      "revenue_cents": 284800,
+      "cost_cents": 128160
+    },
+    {
+      "conversion_id": "e000005",
+      "model": "linear",
+      "channel": "social",
+      "weight": 0.5,
+      "revenue_cents": 284800,
+      "cost_cents": 128160
+    },
+    {
+      "conversion_id": "e000005",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 0.485563447453329,
+      "revenue_cents": 276577,
+      "cost_cents": 124460
+    },
+    {
+      "conversion_id": "e000005",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 293023,
+      "cost_cents": 131860
+    },
+    {
+      "conversion_id": "e000230",
+      "model": "last_click",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 630300,
+      "cost_cents": 283635
+    },
+    {
+      "conversion_id": "e000230",
+      "model": "linear",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 630300,
+      "cost_cents": 283635
+    },
+    {
+      "conversion_id": "e000230",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 630300,
+      "cost_cents": 283635
+    },
+    {
+      "conversion_id": "e000094",
+      "model": "last_click",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 317900,
+      "cost_cents": 143055
+    },
+    {
+      "conversion_id": "e000094",
+      "model": "linear",
+      "channel": "search",
+      "weight": 0.5,
+      "revenue_cents": 158950,
+      "cost_cents": 71528
+    },
+    {
+      "conversion_id": "e000094",
+      "model": "linear",
+      "channel": "social",
+      "weight": 0.5,
+      "revenue_cents": 158950,
+      "cost_cents": 71527
+    },
+    {
+      "conversion_id": "e000094",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 0.485563447453329,
+      "revenue_cents": 154361,
+      "cost_cents": 69462
+    },
+    {
+      "conversion_id": "e000094",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 163539,
+      "cost_cents": 73593
+    },
+    {
+      "conversion_id": "e000206",
+      "model": "last_click",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 324700,
+      "cost_cents": 146115
+    },
+    {
+      "conversion_id": "e000206",
+      "model": "linear",
+      "channel": "display",
+      "weight": 0.5,
+      "revenue_cents": 162350,
+      "cost_cents": 73058
+    },
+    {
+      "conversion_id": "e000206",
+      "model": "linear",
+      "channel": "social",
+      "weight": 0.5,
+      "revenue_cents": 162350,
+      "cost_cents": 73057
+    },
+    {
+      "conversion_id": "e000206",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 0.485563447453329,
+      "revenue_cents": 157662,
+      "cost_cents": 70948
+    },
+    {
+      "conversion_id": "e000206",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 167038,
+      "cost_cents": 75167
+    },
+    {
+      "conversion_id": "e000149",
+      "model": "last_click",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 761600,
+      "cost_cents": 342720
+    },
+    {
+      "conversion_id": "e000149",
+      "model": "linear",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 761600,
+      "cost_cents": 342720
+    },
+    {
+      "conversion_id": "e000149",
+      "model": "time_decay",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 761600,
+      "cost_cents": 342720
+    },
+    {
+      "conversion_id": "e000164",
+      "model": "last_click",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 532400,
+      "cost_cents": 239580
+    },
+    {
+      "conversion_id": "e000164",
+      "model": "linear",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 532400,
+      "cost_cents": 239580
+    },
+    {
+      "conversion_id": "e000164",
+      "model": "time_decay",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 532400,
+      "cost_cents": 239580
+    },
+    {
+      "conversion_id": "e000019",
+      "model": "last_click",
+      "channel": "display",
+      "weight": 1.0,
+      "revenue_cents": 335400,
+      "cost_cents": 150930
+    },
+    {
+      "conversion_id": "e000019",
+      "model": "linear",
+      "channel": "display",
+      "weight": 0.5,
+      "revenue_cents": 167700,
+      "cost_cents": 75465
+    },
+    {
+      "conversion_id": "e000019",
+      "model": "linear",
+      "channel": "social",
+      "weight": 0.5,
+      "revenue_cents": 167700,
+      "cost_cents": 75465
+    },
+    {
+      "conversion_id": "e000019",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 172542,
+      "cost_cents": 77644
+    },
+    {
+      "conversion_id": "e000019",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 0.485563447453329,
+      "revenue_cents": 162858,
+      "cost_cents": 73286
+    },
+    {
+      "conversion_id": "e000252",
+      "model": "last_click",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 362500,
+      "cost_cents": 163125
+    },
+    {
+      "conversion_id": "e000252",
+      "model": "linear",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 362500,
+      "cost_cents": 163125
+    },
+    {
+      "conversion_id": "e000252",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 362500,
+      "cost_cents": 163125
+    },
+    {
+      "conversion_id": "e000467",
+      "model": "last_click",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 495700,
+      "cost_cents": 223065
+    },
+    {
+      "conversion_id": "e000467",
+      "model": "linear",
+      "channel": "display",
+      "weight": 0.5,
+      "revenue_cents": 247850,
+      "cost_cents": 111533
+    },
+    {
+      "conversion_id": "e000467",
+      "model": "linear",
+      "channel": "search",
+      "weight": 0.5,
+      "revenue_cents": 247850,
+      "cost_cents": 111532
+    },
+    {
+      "conversion_id": "e000467",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 0.485563447453329,
+      "revenue_cents": 240694,
+      "cost_cents": 108312
+    },
+    {
+      "conversion_id": "e000467",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 255006,
+      "cost_cents": 114753
+    },
+    {
+      "conversion_id": "e000440",
+      "model": "last_click",
+      "channel": "display",
+      "weight": 1.0,
+      "revenue_cents": 478000,
+      "cost_cents": 215100
+    },
+    {
+      "conversion_id": "e000440",
+      "model": "linear",
+      "channel": "display",
+      "weight": 0.5,
+      "revenue_cents": 239000,
+      "cost_cents": 107550
+    },
+    {
+      "conversion_id": "e000440",
+      "model": "linear",
+      "channel": "social",
+      "weight": 0.5,
+      "revenue_cents": 239000,
+      "cost_cents": 107550
+    },
+    {
+      "conversion_id": "e000440",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 245901,
+      "cost_cents": 110655
+    },
+    {
+      "conversion_id": "e000440",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 0.485563447453329,
+      "revenue_cents": 232099,
+      "cost_cents": 104445
+    },
+    {
+      "conversion_id": "e000072",
+      "model": "last_click",
+      "channel": "display",
+      "weight": 1.0,
+      "revenue_cents": 109400,
+      "cost_cents": 49230
+    },
+    {
+      "conversion_id": "e000072",
+      "model": "linear",
+      "channel": "display",
+      "weight": 0.5,
+      "revenue_cents": 54700,
+      "cost_cents": 24615
+    },
+    {
+      "conversion_id": "e000072",
+      "model": "linear",
+      "channel": "search",
+      "weight": 0.5,
+      "revenue_cents": 54700,
+      "cost_cents": 24615
+    },
+    {
+      "conversion_id": "e000072",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 56279,
+      "cost_cents": 25326
+    },
+    {
+      "conversion_id": "e000072",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 0.485563447453329,
+      "revenue_cents": 53121,
+      "cost_cents": 23904
+    },
+    {
+      "conversion_id": "e000298",
+      "model": "last_click",
+      "channel": "display",
+      "weight": 1.0,
+      "revenue_cents": 590000,
+      "cost_cents": 265500
+    },
+    {
+      "conversion_id": "e000298",
+      "model": "linear",
+      "channel": "display",
+      "weight": 0.5,
+      "revenue_cents": 295000,
+      "cost_cents": 132750
+    },
+    {
+      "conversion_id": "e000298",
+      "model": "linear",
+      "channel": "social",
+      "weight": 0.5,
+      "revenue_cents": 295000,
+      "cost_cents": 132750
+    },
+    {
+      "conversion_id": "e000298",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 303518,
+      "cost_cents": 136583
+    },
+    {
+      "conversion_id": "e000298",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 0.485563447453329,
+      "revenue_cents": 286482,
+      "cost_cents": 128917
+    },
+    {
+      "conversion_id": "e000482",
+      "model": "last_click",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 498600,
+      "cost_cents": 224370
+    },
+    {
+      "conversion_id": "e000482",
+      "model": "linear",
+      "channel": "display",
+      "weight": 0.5,
+      "revenue_cents": 249300,
+      "cost_cents": 112185
+    },
+    {
+      "conversion_id": "e000482",
+      "model": "linear",
+      "channel": "search",
+      "weight": 0.5,
+      "revenue_cents": 249300,
+      "cost_cents": 112185
+    },
+    {
+      "conversion_id": "e000482",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 0.485563447453329,
+      "revenue_cents": 242102,
+      "cost_cents": 108946
+    },
+    {
+      "conversion_id": "e000482",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 256498,
+      "cost_cents": 115424
+    },
+    {
+      "conversion_id": "e000406",
+      "model": "last_click",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 576700,
+      "cost_cents": 259515
+    },
+    {
+      "conversion_id": "e000406",
+      "model": "linear",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 576700,
+      "cost_cents": 259515
+    },
+    {
+      "conversion_id": "e000406",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 576700,
+      "cost_cents": 259515
+    },
+    {
+      "conversion_id": "e000366",
+      "model": "last_click",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 742100,
+      "cost_cents": 333945
+    },
+    {
+      "conversion_id": "e000366",
+      "model": "linear",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 742100,
+      "cost_cents": 333945
+    },
+    {
+      "conversion_id": "e000366",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 742100,
+      "cost_cents": 333945
+    },
+    {
+      "conversion_id": "e000191",
+      "model": "last_click",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 416200,
+      "cost_cents": 187290
+    },
+    {
+      "conversion_id": "e000191",
+      "model": "linear",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 416200,
+      "cost_cents": 187290
+    },
+    {
+      "conversion_id": "e000191",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 416200,
+      "cost_cents": 187290
+    },
+    {
+      "conversion_id": "e000034",
+      "model": "last_click",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 146400,
+      "cost_cents": 65880
+    },
+    {
+      "conversion_id": "e000034",
+      "model": "linear",
+      "channel": "display",
+      "weight": 0.5,
+      "revenue_cents": 73200,
+      "cost_cents": 32940
+    },
+    {
+      "conversion_id": "e000034",
+      "model": "linear",
+      "channel": "search",
+      "weight": 0.5,
+      "revenue_cents": 73200,
+      "cost_cents": 32940
+    },
+    {
+      "conversion_id": "e000034",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 0.485563447453329,
+      "revenue_cents": 71086,
+      "cost_cents": 31989
+    },
+    {
+      "conversion_id": "e000034",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 75314,
+      "cost_cents": 33891
+    },
+    {
+      "conversion_id": "e000319",
+      "model": "last_click",
+      "channel": "display",
+      "weight": 1.0,
+      "revenue_cents": 679200,
+      "cost_cents": 305640
+    },
+    {
+      "conversion_id": "e000319",
+      "model": "linear",
+      "channel": "display",
+      "weight": 0.5,
+      "revenue_cents": 339600,
+      "cost_cents": 152820
+    },
+    {
+      "conversion_id": "e000319",
+      "model": "linear",
+      "channel": "social",
+      "weight": 0.5,
+      "revenue_cents": 339600,
+      "cost_cents": 152820
+    },
+    {
+      "conversion_id": "e000319",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 349405,
+      "cost_cents": 157232
+    },
+    {
+      "conversion_id": "e000319",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 0.485563447453329,
+      "revenue_cents": 329795,
+      "cost_cents": 148408
+    },
+    {
+      "conversion_id": "e000155",
+      "model": "last_click",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 116200,
+      "cost_cents": 52290
+    },
+    {
+      "conversion_id": "e000155",
+      "model": "linear",
+      "channel": "search",
+      "weight": 0.5,
+      "revenue_cents": 58100,
+      "cost_cents": 26145
+    },
+    {
+      "conversion_id": "e000155",
+      "model": "linear",
+      "channel": "social",
+      "weight": 0.5,
+      "revenue_cents": 58100,
+      "cost_cents": 26145
+    },
+    {
+      "conversion_id": "e000155",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 59778,
+      "cost_cents": 26900
+    },
+    {
+      "conversion_id": "e000155",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 0.485563447453329,
+      "revenue_cents": 56422,
+      "cost_cents": 25390
+    },
+    {
+      "conversion_id": "e000024",
+      "model": "last_click",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 115200,
+      "cost_cents": 51840
+    },
+    {
+      "conversion_id": "e000024",
+      "model": "linear",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 115200,
+      "cost_cents": 51840
+    },
+    {
+      "conversion_id": "e000024",
+      "model": "time_decay",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 115200,
+      "cost_cents": 51840
+    },
+    {
+      "conversion_id": "e000200",
+      "model": "last_click",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 437100,
+      "cost_cents": 196695
+    },
+    {
+      "conversion_id": "e000200",
+      "model": "linear",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 437100,
+      "cost_cents": 196695
+    },
+    {
+      "conversion_id": "e000200",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 437100,
+      "cost_cents": 196695
+    },
+    {
+      "conversion_id": "e000415",
+      "model": "last_click",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 145400,
+      "cost_cents": 65430
+    },
+    {
+      "conversion_id": "e000415",
+      "model": "linear",
+      "channel": "search",
+      "weight": 0.5,
+      "revenue_cents": 72700,
+      "cost_cents": 32715
+    },
+    {
+      "conversion_id": "e000415",
+      "model": "linear",
+      "channel": "social",
+      "weight": 0.5,
+      "revenue_cents": 72700,
+      "cost_cents": 32715
+    },
+    {
+      "conversion_id": "e000415",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 0.485563447453329,
+      "revenue_cents": 70601,
+      "cost_cents": 31770
+    },
+    {
+      "conversion_id": "e000415",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 74799,
+      "cost_cents": 33660
+    },
+    {
+      "conversion_id": "e000257",
+      "model": "last_click",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 200500,
+      "cost_cents": 90225
+    },
+    {
+      "conversion_id": "e000257",
+      "model": "linear",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 200500,
+      "cost_cents": 90225
+    },
+    {
+      "conversion_id": "e000257",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 200500,
+      "cost_cents": 90225
+    },
+    {
+      "conversion_id": "e000176",
+      "model": "last_click",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 232400,
+      "cost_cents": 104580
+    },
+    {
+      "conversion_id": "e000176",
+      "model": "linear",
+      "channel": "display",
+      "weight": 0.5,
+      "revenue_cents": 116200,
+      "cost_cents": 52290
+    },
+    {
+      "conversion_id": "e000176",
+      "model": "linear",
+      "channel": "social",
+      "weight": 0.5,
+      "revenue_cents": 116200,
+      "cost_cents": 52290
+    },
+    {
+      "conversion_id": "e000176",
+      "model": "time_decay",
+      "channel": "display",
+      "weight": 0.485563447453329,
+      "revenue_cents": 112845,
+      "cost_cents": 50780
+    },
+    {
+      "conversion_id": "e000176",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 119555,
+      "cost_cents": 53800
+    },
+    {
+      "conversion_id": "e000125",
+      "model": "last_click",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 701300,
+      "cost_cents": 315585
+    },
+    {
+      "conversion_id": "e000125",
+      "model": "linear",
+      "channel": "search",
+      "weight": 0.5,
+      "revenue_cents": 350650,
+      "cost_cents": 157793
+    },
+    {
+      "conversion_id": "e000125",
+      "model": "linear",
+      "channel": "social",
+      "weight": 0.5,
+      "revenue_cents": 350650,
+      "cost_cents": 157792
+    },
+    {
+      "conversion_id": "e000125",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 0.5144365525466711,
+      "revenue_cents": 360774,
+      "cost_cents": 162348
+    },
+    {
+      "conversion_id": "e000125",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 0.485563447453329,
+      "revenue_cents": 340526,
+      "cost_cents": 153237
+    },
+    {
+      "conversion_id": "e000108",
+      "model": "last_click",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 107900,
+      "cost_cents": 48555
+    },
+    {
+      "conversion_id": "e000108",
+      "model": "linear",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 107900,
+      "cost_cents": 48555
+    },
+    {
+      "conversion_id": "e000108",
+      "model": "time_decay",
+      "channel": "search",
+      "weight": 1.0,
+      "revenue_cents": 107900,
+      "cost_cents": 48555
+    },
+    {
+      "conversion_id": "e000066",
+      "model": "last_click",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 694800,
+      "cost_cents": 312660
+    },
+    {
+      "conversion_id": "e000066",
+      "model": "linear",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 694800,
+      "cost_cents": 312660
+    },
+    {
+      "conversion_id": "e000066",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 694800,
+      "cost_cents": 312660
+    },
+    {
+      "conversion_id": "e000289",
+      "model": "last_click",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 392100,
+      "cost_cents": 176445
+    },
+    {
+      "conversion_id": "e000289",
+      "model": "linear",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 392100,
+      "cost_cents": 176445
+    },
+    {
+      "conversion_id": "e000289",
+      "model": "time_decay",
+      "channel": "social",
+      "weight": 1.0,
+      "revenue_cents": 392100,
+      "cost_cents": 176445
+    },
+    {
+      "conversion_id": "e000325",
+      "model": "last_click",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 261500,
+      "cost_cents": 117675
+    },
+    {
+      "conversion_id": "e000325",
+      "model": "linear",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 261500,
+      "cost_cents": 117675
+    },
+    {
+      "conversion_id": "e000325",
+      "model": "time_decay",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 261500,
+      "cost_cents": 117675
+    },
+    {
+      "conversion_id": "e000051",
+      "model": "last_click",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 563300,
+      "cost_cents": 253485
+    },
+    {
+      "conversion_id": "e000051",
+      "model": "linear",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 563300,
+      "cost_cents": 253485
+    },
+    {
+      "conversion_id": "e000051",
+      "model": "time_decay",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 563300,
+      "cost_cents": 253485
+    },
+    {
+      "conversion_id": "e000487",
+      "model": "last_click",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 660500,
+      "cost_cents": 297225
+    },
+    {
+      "conversion_id": "e000487",
+      "model": "linear",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 660500,
+      "cost_cents": 297225
+    },
+    {
+      "conversion_id": "e000487",
+      "model": "time_decay",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 660500,
+      "cost_cents": 297225
+    },
+    {
+      "conversion_id": "e000358",
+      "model": "last_click",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 491600,
+      "cost_cents": 221220
+    },
+    {
+      "conversion_id": "e000358",
+      "model": "linear",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 491600,
+      "cost_cents": 221220
+    },
+    {
+      "conversion_id": "e000358",
+      "model": "time_decay",
+      "channel": "unattributed",
+      "weight": 1.0,
+      "revenue_cents": 491600,
+      "cost_cents": 221220
+    }
+  ]
+}
