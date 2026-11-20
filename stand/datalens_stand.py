@@ -1,9 +1,9 @@
 """Create the marketing funnel objects in DataLens OSS and compare card numbers with the reference.
 
-Written from the DataLens OSS v2.9.0 sources (datalens-ui 0.3831.0, datalens-backend 0.2457.0)
-without running DataLens. Every request path below is quoted in docs/runs/2026-11-19-stand-prep.md
-with its source file; the request bodies are reconstructed from schemas and tests and are
-unverified until the first stand run.
+Written from the DataLens OSS v2.9.0 sources (datalens-ui 0.3831.0, datalens-backend 0.2457.0).
+Every request path below is quoted in docs/runs/2026-11-19-stand-prep.md with its source file;
+the request bodies were reconstructed from schemas and tests and verified by the stand run of
+20.11.2026 (docs/runs/2026-11-20-stand.md).
 
 Exit codes: 0 numbers match, 1 numbers differ, 2 an API call or a chart run failed.
 Standard library only: the stand machine needs no extra packages for this step.
@@ -447,7 +447,7 @@ def chart_problem(result):
 
     A successful run carries `data` (charts-engine processor/index.ts in datalens-ui 0.3831.0);
     for a flatTable it is assumed to hold a nonempty `rows` list. An empty 200 answer ({}) fails.
-    The `rows` shape is read from the source and is unverified until the first stand run.
+    The `rows` shape was read from the source and confirmed by the stand run of 20.11.2026.
     """
     if not isinstance(result, dict):
         return "answer is not a JSON object"

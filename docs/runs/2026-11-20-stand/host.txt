@@ -1,0 +1,17 @@
+nproc: 4
+--- free -g
+               total        used        free      shared  buff/cache   available
+Mem:              15           1           2           0          12          14
+Swap:              0           0           0
+--- df -h
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          32G  7.7G   23G  26% /
+tmpfs            64M     0   64M   0% /dev
+shm              64M     0   64M   0% /dev/shm
+/dev/root        29G   15G   15G  52% /vscode
+/dev/loop4       32G  7.7G   23G  26% /workspaces
+/dev/sdb1       118G  3.6G  109G   4% /tmp
+--- docker root: /var/lib/docker
+docker 29.9.3-1
+Docker Compose version v5.8.0
+Python 3.11.18

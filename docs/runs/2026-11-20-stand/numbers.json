@@ -1,0 +1,186 @@
+{
+  "channels": [
+    {
+      "model": "last_click",
+      "channel": "display",
+      "conversions": 9.0,
+      "revenue_rub": 45841.0,
+      "cost_rub": 20628.45,
+      "spend_rub": 781.86,
+      "margin_rub": 24430.69,
+      "cpa_rub": 86.87333333333333
+    },
+    {
+      "model": "last_click",
+      "channel": "email",
+      "conversions": 0.0,
+      "revenue_rub": 0.0,
+      "cost_rub": 0.0,
+      "spend_rub": 100.0,
+      "margin_rub": -100.0,
+      "cpa_rub": null
+    },
+    {
+      "model": "last_click",
+      "channel": "search",
+      "conversions": 14.0,
+      "revenue_rub": 57516.0,
+      "cost_rub": 25882.2,
+      "spend_rub": 778.16,
+      "margin_rub": 30855.64,
+      "cpa_rub": 55.582857142857144
+    },
+    {
+      "model": "last_click",
+      "channel": "social",
+      "conversions": 14.0,
+      "revenue_rub": 52967.0,
+      "cost_rub": 23835.15,
+      "spend_rub": 455.15,
+      "margin_rub": 28676.7,
+      "cpa_rub": 32.510714285714286
+    },
+    {
+      "model": "last_click",
+      "channel": "unattributed",
+      "conversions": 7.0,
+      "revenue_rub": 33861.0,
+      "cost_rub": 15237.45,
+      "spend_rub": 0.0,
+      "margin_rub": 18623.55,
+      "cpa_rub": 0.0
+    },
+    {
+      "model": "linear",
+      "channel": "display",
+      "conversions": 10.0,
+      "revenue_rub": 47588.5,
+      "cost_rub": 21414.85,
+      "spend_rub": 781.86,
+      "margin_rub": 25391.79,
+      "cpa_rub": 78.186
+    },
+    {
+      "model": "linear",
+      "channel": "email",
+      "conversions": 0.0,
+      "revenue_rub": 0.0,
+      "cost_rub": 0.0,
+      "spend_rub": 100.0,
+      "margin_rub": -100.0,
+      "cpa_rub": null
+    },
+    {
+      "model": "linear",
+      "channel": "search",
+      "conversions": 10.5,
+      "revenue_rub": 39765.0,
+      "cost_rub": 17894.26,
+      "spend_rub": 778.16,
+      "margin_rub": 21092.58,
+      "cpa_rub": 74.11047619047619
+    },
+    {
+      "model": "linear",
+      "channel": "social",
+      "conversions": 16.5,
+      "revenue_rub": 68970.5,
+      "cost_rub": 31036.69,
+      "spend_rub": 455.15,
+      "margin_rub": 37478.66,
+      "cpa_rub": 27.584848484848486
+    },
+    {
+      "model": "linear",
+      "channel": "unattributed",
+      "conversions": 7.0,
+      "revenue_rub": 33861.0,
+      "cost_rub": 15237.45,
+      "spend_rub": 0.0,
+      "margin_rub": 18623.55,
+      "cpa_rub": 0.0
+    },
+    {
+      "model": "time_decay",
+      "channel": "display",
+      "conversions": 9.971126894906657,
+      "revenue_rub": 47538.04,
+      "cost_rub": 21392.12,
+      "spend_rub": 781.86,
+      "margin_rub": 25364.06,
+      "cpa_rub": 78.41240094932311
+    },
+    {
+      "model": "time_decay",
+      "channel": "email",
+      "conversions": 0.0,
+      "revenue_rub": 0.0,
+      "cost_rub": 0.0,
+      "spend_rub": 100.0,
+      "margin_rub": -100.0,
+      "cpa_rub": null
+    },
+    {
+      "model": "time_decay",
+      "channel": "search",
+      "conversions": 10.601055867826698,
+      "revenue_rub": 40277.53,
+      "cost_rub": 18124.87,
+      "spend_rub": 778.16,
+      "margin_rub": 21374.5,
+      "cpa_rub": 73.40400896873389
+    },
+    {
+      "model": "time_decay",
+      "channel": "social",
+      "conversions": 16.427817237266645,
+      "revenue_rub": 68508.43,
+      "cost_rub": 30828.81,
+      "spend_rub": 455.15,
+      "margin_rub": 37224.47,
+      "cpa_rub": 27.70605451876396
+    },
+    {
+      "model": "time_decay",
+      "channel": "unattributed",
+      "conversions": 7.0,
+      "revenue_rub": 33861.0,
+      "cost_rub": 15237.45,
+      "spend_rub": 0.0,
+      "margin_rub": 18623.55,
+      "cpa_rub": 0.0
+    }
+  ],
+  "unattributed_share": {
+    "last_click": 0.1590909090909091,
+    "linear": 0.1590909090909091,
+    "time_decay": 0.1590909090909091
+  },
+  "funnel": [
+    {
+      "step_number": 1,
+      "step": "impression",
+      "users": 120.0
+    },
+    {
+      "step_number": 2,
+      "step": "click",
+      "users": 99.0
+    },
+    {
+      "step_number": 3,
+      "step": "install",
+      "users": 75.0
+    },
+    {
+      "step_number": 4,
+      "step": "registration",
+      "users": 58.0
+    },
+    {
+      "step_number": 5,
+      "step": "subscription",
+      "users": 37.0
+    }
+  ]
+}

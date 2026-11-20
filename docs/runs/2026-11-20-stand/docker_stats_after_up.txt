@@ -1,0 +1,7 @@
+CONTAINER ID   NAME                                            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O          BLOCK I/O         PIDS
+4d62228019df   marketing-funnel-datalens-stand-ui-1            74.15%    82.88MiB / 15.62GiB   0.52%     642B / 126B      23.5MB / 8.19kB   13
+a0ea8d74a70f   marketing-funnel-datalens-stand-data-api-1      66.44%    53.04MiB / 15.62GiB   0.33%     600B / 126B      40.4MB / 0B       4
+a9f91d5800df   marketing-funnel-datalens-stand-control-api-1   197.67%   253.2MiB / 15.62GiB   1.58%     1.01kB / 126B    1MB / 0B          17
+d05ee8bac41a   marketing-funnel-datalens-stand-us-1            58.06%    141.4MiB / 15.62GiB   0.88%     311kB / 4.52kB   62.7MB / 4.1kB    24
+560b530487ee   marketing-funnel-datalens-stand-postgres-1      0.03%     44.52MiB / 15.62GiB   0.28%     1.63kB / 126B    5.05MB / 267MB    6
+7fe346ecec47   marketing-funnel-datalens-stand-clickhouse-1    2.98%     139MiB / 15.62GiB     0.87%     1.78kB / 126B    492kB / 307kB     669

@@ -1,0 +1,58 @@
+DataLens OSS stand check (marketing-funnel-datalens)
+finished_utc: 2026-11-20T08:40:17Z
+commit: 102d7ae
+overall: PASS, numbers match, charts return rows, screenshot pages loaded
+exit_code: 0
+last_step: done
+step_host: ok (cpu 4, ram 15 GB, disk free 23 GB)
+step_compose_up: ok
+step_snapshot: ok (seed 20261031, size 120, inputs.json and report.json match the manifest)
+step_load: ok (database marketing_funnel)
+step_datalens: ok (numbers match, charts build)
+step_screenshots: ok
+
+== host ==
+nproc: 4
+--- free -g
+               total        used        free      shared  buff/cache   available
+Mem:              15           1           2           0          12          14
+Swap:              0           0           0
+--- df -h
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          32G  7.7G   23G  26% /
+tmpfs            64M     0   64M   0% /dev
+shm              64M     0   64M   0% /dev/shm
+/dev/root        29G   15G   15G  52% /vscode
+/dev/loop4       32G  7.7G   23G  26% /workspaces
+/dev/sdb1       118G  3.6G  109G   4% /tmp
+--- docker root: /var/lib/docker
+docker 29.9.3-1
+Docker Compose version v5.8.0
+Python 3.11.18
+
+== comparison (DataLens data API vs docs/runs/2026-10-31-synthetic/report.json) ==
+compared: channel rows 15, models 3, funnel steps 5
+NUMBERS MATCH the reference report
+charts: every run returned 200 with table rows
+
+== screenshots ==
+00_workbook.png
+01_connection.png
+02_dataset_channel_metrics.png
+02_dataset_user_funnel.png
+03_chart_channels.png
+03_chart_compare.png
+03_chart_funnel.png
+03_chart_share.png
+04_dashboard_last_click.png
+05_dashboard_linear.png
+05_dashboard_time_decay.png
+
+== docker stats --no-stream ==
+CONTAINER ID   NAME                                            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O         PIDS
+4d62228019df   marketing-funnel-datalens-stand-ui-1            0.01%     153.8MiB / 15.62GiB   0.96%     2.14MB / 2.84MB   37MB / 16.4kB     18
+a0ea8d74a70f   marketing-funnel-datalens-stand-data-api-1      0.67%     805.3MiB / 15.62GiB   5.04%     1.07MB / 392kB    68.9MB / 0B       37
+a9f91d5800df   marketing-funnel-datalens-stand-control-api-1   0.00%     659MiB / 15.62GiB     4.12%     335kB / 1.4MB     1.01MB / 0B       17
+d05ee8bac41a   marketing-funnel-datalens-stand-us-1            0.01%     99.79MiB / 15.62GiB   0.62%     2.64MB / 2.4MB    71.3MB / 8.19kB   11
+560b530487ee   marketing-funnel-datalens-stand-postgres-1      0.00%     93.92MiB / 15.62GiB   0.59%     978kB / 2.1MB     10.6MB / 313MB    19
+7fe346ecec47   marketing-funnel-datalens-stand-clickhouse-1    5.18%     223.7MiB / 15.62GiB   1.40%     108kB / 130kB     6.23MB / 13.6MB   691

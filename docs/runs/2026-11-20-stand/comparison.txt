@@ -1,0 +1,3 @@
+compared: channel rows 15, models 3, funnel steps 5
+NUMBERS MATCH the reference report
+charts: every run returned 200 with table rows

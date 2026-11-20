@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Unattended DataLens OSS stand check for the marketing funnel.
-# Prepared from documentation and source code; NOT run yet. See docs/runs/2026-11-19-stand-prep.md.
+# Prepared from documentation and source code (docs/runs/2026-11-19-stand-prep.md);
+# first passing run: docs/runs/2026-11-20-stand.md.
 #
 # Usage on any Linux machine with Docker (compose v2) and Python 3.11+:
 #   bash stand/run.sh

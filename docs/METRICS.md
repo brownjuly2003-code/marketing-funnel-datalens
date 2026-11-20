@@ -11,7 +11,7 @@
 
 ## Внешние справочники
 
-- [DataLens OSS](https://github.com/datalens-tech/datalens) — будущий сервис; установка не выполнялась.
-- [DataLens: датасеты](https://yandex.cloud/ru/docs/datalens/dataset/) — справочник для будущего этапа, не свидетельство настройки.
+- [DataLens OSS](https://github.com/datalens-tech/datalens) — релиз v2.9.0 поднят на учебном стенде 20.11.2026 ([протокол](runs/2026-11-20-stand.md)).
+- [DataLens: датасеты](https://yandex.cloud/ru/docs/datalens/dataset/) — справочник, не свидетельство настройки.
 
-Ссылки приведены для будущего подключения. Совместимость с актуальными API и UI не проверялась.
+Совместимость с API и интерфейсом DataLens проверена только для релиза v2.9.0 на этом стенде.

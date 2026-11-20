@@ -1,0 +1,16 @@
+{
+  "workbook": "u8qjyvks0uz2d",
+  "connection": "n1jcronvemyo6",
+  "datasets": {
+    "channel_metrics": "5j1u98ya9408o",
+    "user_funnel": "r5ngvveqn290a"
+  },
+  "charts": {
+    "channels": "p3lety8vf78w8",
+    "share": "ftb4jo1d1usgy",
+    "compare": "xbtm16ldgpq0g",
+    "funnel": "ftb4jo6hucdgy"
+  },
+  "dashboard": "p3letykdzcmw8",
+  "model_field_guid": "model"
+}
