@@ -341,6 +341,11 @@ def create_chart(api, workbook_id, name, config):
     return created["entryId"]
 
 
+def widget_tab_id(key):
+    """Id of the single tab of chart widget `key`; dashboard connections refer to it."""
+    return f"w-{key}-tab"
+
+
 def create_dashboard(api, workbook_id, channel_ds, charts):
     model_guid = channel_ds["fields"]["model"]["guid"]
     control = {
@@ -373,7 +378,7 @@ def create_dashboard(api, workbook_id, channel_ds, charts):
                 "hideTitle": False,
                 "tabs": [
                     {
-                        "id": f"w-{key}-tab",
+                        "id": widget_tab_id(key),
                         "title": title,
                         "description": "",
                         "chartId": chart_id,
@@ -399,9 +404,14 @@ def create_dashboard(api, workbook_id, channel_ds, charts):
                 "items": [control, *widgets],
                 "layout": layout,
                 # Model comparison and funnel must not follow the single-model selector.
+                # A connection names a control id or a widget TAB id, not the widget id:
+                # datalens-ui src/server/components/sdk/dash.ts rejects other ids.
+                # In an "ignore" connection `from` is the item that ignores and `to` the item
+                # it ignores (getMapItemsIgnores in @gravity-ui/dashkit). Both found on the
+                # stand runs of 19-20.11.2026.
                 "connections": [
-                    {"from": "ctl-model", "to": "w-compare", "kind": "ignore"},
-                    {"from": "ctl-model", "to": "w-funnel", "kind": "ignore"},
+                    {"from": widget_tab_id("compare"), "to": "ctl-model", "kind": "ignore"},
+                    {"from": widget_tab_id("funnel"), "to": "ctl-model", "kind": "ignore"},
                 ],
                 "aliases": {"default": []},
             }
@@ -508,7 +518,9 @@ def main():
                 "username": "datalens",
                 "password": password,
                 "db_name": args.database,
-                "secure": False,
+                # OnOffField of the DataLens API: "on"/"off" strings, a boolean is rejected
+                # (found on the first stand run, 19.11.2026).
+                "secure": "off",
                 "readonly": 1,
             },
         )

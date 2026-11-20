@@ -1,14 +1,26 @@
 <!-- Read-only ClickHouse user for the DataLens connection on the stand.
      The default user is left as the image configures it; the loader uses it through docker exec.
-     Password comes from the container environment (stand/.env). -->
+     Password comes from the container environment (stand/.env).
+     DataLens sends join_use_nulls, readonly, send_progress_in_http_headers and
+     output_format_json_quote_denormals with every query. In readonly=1 mode ClickHouse
+     rejects a setting that differs from the profile value, so the profile carries the
+     same values (as the readonly profile in DataLens' own ClickHouse test config). -->
 <clickhouse>
+    <profiles>
+        <datalens_readonly>
+            <readonly>1</readonly>
+            <join_use_nulls>1</join_use_nulls>
+            <send_progress_in_http_headers>0</send_progress_in_http_headers>
+            <output_format_json_quote_denormals>1</output_format_json_quote_denormals>
+        </datalens_readonly>
+    </profiles>
     <users>
         <datalens>
             <password from_env="CLICKHOUSE_DATALENS_PASSWORD"/>
             <networks>
                 <ip>::/0</ip>
             </networks>
-            <profile>readonly</profile>
+            <profile>datalens_readonly</profile>
             <quota>default</quota>
         </datalens>
     </users>

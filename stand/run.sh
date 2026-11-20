@@ -16,7 +16,8 @@
 #   5 the generated snapshot (inputs.json or report.json) differs from the reference SHA-256
 #   6 the stand did not start or the marts did not load (see last_step and compose_logs.txt)
 #   any other code: an unexpected command failure, see last_step and run.log
-# Environment: MIN_DISK_GB (default 10), SKIP_SCREENSHOTS=1, PYTHON (default python3.11 or python3).
+# Environment: MIN_DISK_GB (default 10), SKIP_SCREENSHOTS=1, PYTHON (default python3.11 or python3),
+#   KEEP_STAND=1 (debugging only: skip the final "docker compose down -v", the stand stays up).
 set -euo pipefail
 
 STAND_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -76,7 +77,9 @@ finish() {
     echo "== docker stats --no-stream =="
     cat "$OUT/docker_stats.txt" 2>/dev/null || echo "not collected"
   } > "$OUT/SUMMARY.txt"
-  if [ "$STARTED_UP" = 1 ]; then
+  if [ "$STARTED_UP" = 1 ] && [ "${KEEP_STAND:-0}" = 1 ]; then
+    log "teardown skipped (KEEP_STAND=1): stop the stand with docker compose down -v"
+  elif [ "$STARTED_UP" = 1 ]; then
     log "teardown: docker compose down -v"
     "${COMPOSE[@]}" down -v --remove-orphans
   fi

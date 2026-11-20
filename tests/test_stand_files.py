@@ -179,3 +179,83 @@ def test_devcontainer_is_pinned_and_sized():
         assert re.search(r":\d+\.\d+\.\d+$", ref), ref
     assert any(f["version"] == "3.11" for f in features.values() if "version" in f)
     assert config["hostRequirements"] == {"cpus": 4, "memory": "16gb", "storage": "32gb"}
+
+
+class RecordingApi:
+    def __init__(self):
+        self.bodies = {}
+
+    def call(self, name, method, url, body=None, ok=(200,)):
+        self.bodies[name] = body
+        return {"entry": {"entryId": "dash-1"}}
+
+
+def test_dashboard_connections_name_the_control_and_widget_tabs():
+    # datalens-ui dash.ts accepts only control ids and widget tab ids in connections;
+    # dashkit getMapItemsIgnores reads an ignore connection as "from ignores to".
+    stand = load_stand_module("datalens_stand")
+    api = RecordingApi()
+    channel_ds = {"id": "ds-1", "fields": {"model": {"guid": "model"}}}
+    charts = {key: (key, f"id-{key}") for key in ("channels", "share", "compare", "funnel")}
+    assert stand.create_dashboard(api, "wb", channel_ds, charts) == ("dash-1", "model")
+    (tab,) = api.bodies["dashboard"]["entry"]["data"]["tabs"]
+    known = set()
+    for item in tab["items"]:
+        if item["type"] == "control":
+            known.add(item["id"])
+        else:
+            known.update(widget_tab["id"] for widget_tab in item["data"]["tabs"])
+    pairs = {(c["from"], c["to"]) for c in tab["connections"] if c["kind"] == "ignore"}
+    # `from` ignores `to`: the widgets ignore the selector, not the other way round.
+    assert pairs == {("w-compare-tab", "ctl-model"), ("w-funnel-tab", "ctl-model")}
+    assert {end for pair in pairs for end in pair} <= known
+
+
+def test_connection_secure_flag_is_an_on_off_string():
+    # The DataLens connection API reads `secure` with an OnOffField: "on"/"off", not a boolean.
+    source = (STAND / "datalens_stand.py").read_text(encoding="utf-8")
+    assert '"secure": "off",' in source
+    assert '"secure": False' not in source
+
+
+def test_clickhouse_profile_allows_the_settings_datalens_sends():
+    # With readonly=1 ClickHouse rejects a query setting that differs from the profile value.
+    import xml.etree.ElementTree as ET
+
+    root = ET.parse(STAND / "clickhouse/users.d/datalens.xml").getroot()
+    profile_name = root.find("users/datalens/profile").text
+    profile = root.find(f"profiles/{profile_name}")
+    settings = {child.tag: child.text for child in profile}
+    assert settings == {
+        "readonly": "1",
+        "join_use_nulls": "1",
+        "send_progress_in_http_headers": "0",
+        "output_format_json_quote_denormals": "1",
+    }
+
+
+def test_keep_stand_skips_only_the_teardown():
+    assert '"${KEEP_STAND:-0}" = 1' in RUN_SH
+    assert "KEEP_STAND=1 (debugging only" in RUN_SH
+
+
+def test_dashboard_shot_needs_the_selected_model_and_every_compared_model():
+    shots = load_stand_module("screenshots")
+    compare = "\n".join(["Сравнение моделей", "model", "last_click", "linear", "time_decay"])
+    assert shots.dashboard_problem("linear", " linear ", compare) is None
+    assert "selector shows 'last_click'" in shots.dashboard_problem("linear", "last_click", compare)
+    only_one = "\n".join(["Сравнение моделей", "model", "linear", "linear"])
+    assert "lacks last_click, time_decay" in shots.dashboard_problem("linear", "linear", only_one)
+
+
+def test_dashboard_is_shot_for_every_model_and_switched_by_a_click():
+    shots = load_stand_module("screenshots")
+    assert shots.dashboard_shots() == [
+        ("04_dashboard_last_click", "last_click"),
+        ("05_dashboard_linear", "linear"),
+        ("05_dashboard_time_decay", "time_decay"),
+    ]
+    source = (STAND / "screenshots.py").read_text(encoding="utf-8")
+    assert "?{" not in source and "quote(" not in source
+    names = [name for name, _ in shots.pages({"workbook": "wb", "dashboard": "d", "charts": {}})]
+    assert names == ["00_workbook"]
